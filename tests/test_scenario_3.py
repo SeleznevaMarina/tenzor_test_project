@@ -2,7 +2,7 @@ import pytest
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
-from page_objects import MainPage, ContactsPage
+from page_objects import MainPage
 
 
 @pytest.fixture
@@ -12,11 +12,10 @@ def browser():
     yield driver
     driver.quit()
 
-def test_scenario_2(browser):
+def test_scenario_3(browser):
     main_page = MainPage(browser)
     main_page.open()
-    main_page.go_to_contacts()
-    contacts_page = ContactsPage(browser)
-    contacts_page.check_region_and_partners()
-    contacts_page.change_region('Камчатский край')
-    contacts_page.verify_region_change('Камчатский край')
+    main_page.download_local_vesions()
+    main_page.download_plagin('Ubuntu')
+    main_page.check_dounload_file()
+    main_page.check_size_file()
