@@ -6,10 +6,8 @@ from page_objects import MainPage, DownloadPage
 from selenium.webdriver.chrome.options import Options
 import os
 
-# Указываем путь к папке загрузки
-download_path = os.path.expanduser("~/projects/tenzor_test_project/tenzor_test_project/tests")
 
-# Создаем объект опций для Chrome
+download_path = os.path.expanduser("~/projects/tenzor_test_project/tenzor_test_project/tests")
 chrome_options = Options()
 chrome_options.add_experimental_option('prefs', {
     'download.default_directory': download_path,
