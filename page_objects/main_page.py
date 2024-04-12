@@ -1,4 +1,6 @@
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions as EC
+
 
 class MainPage:
     def __init__(self, driver):
@@ -12,4 +14,6 @@ class MainPage:
         contacts_link = self.driver.find_element(By.LINK_TEXT, "Контакты")
         contacts_link.click()
 
-    # Другие методы для взаимодействия с элементами на главной странице могут быть добавлены здесь
+    def download_local_versions(self):
+        download_link = self.driver.find_element(By.LINK_TEXT, "Скачать локальные версии")
+        self.driver.execute_script("arguments[0].click();", download_link)
