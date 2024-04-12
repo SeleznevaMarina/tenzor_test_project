@@ -2,7 +2,7 @@
 name = "tenzor_test_project"
 version = "0.1.0"
 description = ""
-authors = ["«Selezneva <petrukhina.marina2011@yandex.ru>"]
+authors = ["Selezneva <petrukhina.marina2011@yandex.ru>"]
 
 [tool.poetry.dependencies]
 python = "^3.9"
